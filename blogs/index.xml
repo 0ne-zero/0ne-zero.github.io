@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>0ne-zero&#39;s Blog</title>
-    <link>https://0ne-zero.github.io/</link>
-    <description>Recent content on 0ne-zero&#39;s Blog</description>
+    <title>Blogs on 0ne-zero&#39;s Blog</title>
+    <link>https://0ne-zero.github.io/blogs/</link>
+    <description>Recent content in Blogs on 0ne-zero&#39;s Blog</description>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
     <copyright>Pouria Khakpour - 0ne-zero</copyright>
     <lastBuildDate>Mon, 20 Jan 2025 19:19:04 +0330</lastBuildDate>
-    <atom:link href="https://0ne-zero.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://0ne-zero.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Init</title>
       <link>https://0ne-zero.github.io/blogs/init/</link>
       <pubDate>Mon, 20 Jan 2025 19:19:04 +0330</pubDate>
       <guid>https://0ne-zero.github.io/blogs/init/</guid>
       <description>&lt;p&gt;Just init post.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://0ne-zero.github.io/about/</link>
-      <pubDate>Mon, 20 Jan 2025 18:45:47 +0330</pubDate>
-      <guid>https://0ne-zero.github.io/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m 0ne-zero.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
