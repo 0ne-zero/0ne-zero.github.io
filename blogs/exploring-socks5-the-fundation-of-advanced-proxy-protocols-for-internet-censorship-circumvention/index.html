@@ -59,7 +59,10 @@ The SOCKS5 protocol has emerged as a crucial foundation for more advanced proxy 
         }
 
     </style>
-</noscript><meta property="og:url" content="https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/">
+</noscript><script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({ startOnLoad: true });
+</script><meta property="og:url" content="https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/">
   <meta property="og:site_name" content="0ne-zero&#39;s Blog">
   <meta property="og:title" content="Exploring Socks5 the Fundation of Advanced Proxy Protocols for Internet Censorship Circumvention">
   <meta property="og:description" content="The SOCKS5 protocol serves as a foundational proxy protocol that has inspired the development of more advanced solutions for secure communications, privacy enhancement, and internet censorship circumvention. These issues are particularly pressing in countries like Iran, China, India, and Kazakhstan.
@@ -385,15 +388,20 @@ The SOCKS5 protocol has emerged as a crucial foundation for more advanced proxy 
 </li>
 </ul>
 <p>Example diagram:</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+<div class="mermaid">
+    
+sequenceDiagram
     participant Client
     participant Server
 
-    Client-&gt;&gt;Server: [SOCKS Version] [NMethods] [Methods...]
+    Client->>Server: [SOCKS Version] [NMethods] [Methods...]
     Note right of Client: Client sends the supported methods
-    Server-&gt;&gt;Client: [SOCKS Version] [Method]
+    Server->>Client: [SOCKS Version] [Method]
     Note left of Server: Server responds with the selected authentication method
-</code></pre><h4 id="2-authentication"><strong>2. Authentication</strong><a hidden class="anchor" aria-hidden="true" href="#2-authentication">#</a></h4>
+
+</div>
+
+<h4 id="2-authentication"><strong>2. Authentication</strong><a hidden class="anchor" aria-hidden="true" href="#2-authentication">#</a></h4>
 <ul>
 <li>
 <p>For <strong>GSSAPI Authentication(0x01)</strong>:</p>
@@ -414,15 +422,20 @@ The SOCKS5 protocol has emerged as a crucial foundation for more advanced proxy 
 </li>
 </ul>
 <p>Example diagram:</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+<div class="mermaid">
+    
+sequenceDiagram
     participant Client
     participant Server
 
-    Client-&gt;&gt;Server: [Username Length] [Username] [Password Length] [Password]
+    Client->>Server: [Username Length] [Username] [Password Length] [Password]
     Note right of Client: Client sends login credentials
-    Server-&gt;&gt;Client: [Version] [Status]
+    Server->>Client: [Version] [Status]
     Note left of Server: Server responds with authentication status
-</code></pre><h4 id="3-request-reply-handling"><strong>3. Request-Reply Handling</strong><a hidden class="anchor" aria-hidden="true" href="#3-request-reply-handling">#</a></h4>
+
+</div>
+
+<h4 id="3-request-reply-handling"><strong>3. Request-Reply Handling</strong><a hidden class="anchor" aria-hidden="true" href="#3-request-reply-handling">#</a></h4>
 <ul>
 <li>
 <p>Client sends the desired action (e.g., CONNECT, BIND, or UDP ASSOCIATE) with the target address and port.</p>
@@ -432,15 +445,19 @@ The SOCKS5 protocol has emerged as a crucial foundation for more advanced proxy 
 </li>
 </ul>
 <p>Example diagram:</p>
-<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">sequenceDiagram
+<h2 id="hahahugoshortcode5s2hbhb"><div class="mermaid">
+    
+sequenceDiagram
     participant Client
     participant Server
 
-    Client-&gt;&gt;Server: [SOCKS Version] [Command] [Reserved] [Address Type] [Destination Address] [Destination Port]
+    Client->>Server: [SOCKS Version] [Command] [Reserved] [Address Type] [Destination Address] [Destination Port]
     Note right of Client: Client sends connection request with destination details
-    Server-&gt;&gt;Client: [SOCKS Version] [Reply] [Reserved] [Address Type] [Bound Address] [Bound Port]
+    Server->>Client: [SOCKS Version] [Reply] [Reserved] [Address Type] [Bound Address] [Bound Port]
     Note left of Server: Server responds with connection status and bound address
-</code></pre><hr>
+
+</div>
+</h2>
 <h3 id="7-enhancing-socks5-its-limitations">7. Enhancing SOCKS5: Its Limitations<a hidden class="anchor" aria-hidden="true" href="#7-enhancing-socks5-its-limitations">#</a></h3>
 <ol>
 <li>
