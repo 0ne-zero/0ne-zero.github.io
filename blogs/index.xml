@@ -10,11 +10,11 @@
     <lastBuildDate>Mon, 20 Jan 2025 19:27:34 +0330</lastBuildDate>
     <atom:link href="https://0ne-zero.github.io/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Exploring Socks5 the Fundation of Advanced Proxy Protocols for Internet Censorship Circumvention</title>
+      <title>Exploring SOCKS5 the Fundation of Advanced Proxy Protocols for Internet Censorship Circumvention</title>
       <link>https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/</link>
       <pubDate>Mon, 20 Jan 2025 19:27:34 +0330</pubDate>
       <guid>https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/SOCKS&#34;&gt;SOCKS5&lt;/a&gt; protocol serves as a foundational proxy protocol that has inspired the development of more advanced solutions for secure communications, privacy enhancement, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_censorship&#34;&gt;internet censorship&lt;/a&gt; circumvention. These issues are particularly pressing in countries like Iran, China, India, and Kazakhstan.&lt;/p&gt;
+      <description>&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/SOCKS&#34;&gt;SOCKS5&lt;/a&gt; protocol serves as a foundational proxy protocol that has inspired the development of more advanced solutions for secure communications, privacy enhancement, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_censorship&#34;&gt;internet censorship&lt;/a&gt; circumvention. These issues are particularly pressing in countries like Islamic Republic of Iran, China, India, and Kazakhstan.&lt;/p&gt;
 &lt;p&gt;In this blog, we delve into SOCKS5&amp;rsquo;s usage, technical specifications, limitations, and how it has influenced the development of subsequent proxy protocols.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
