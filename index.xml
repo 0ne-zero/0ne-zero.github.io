@@ -4,6 +4,11 @@
     <title>0ne-zero&#39;s Blog</title>
     <link>https://0ne-zero.github.io/</link>
     <description>Recent content on 0ne-zero&#39;s Blog</description>
+    <image>
+      <title>0ne-zero&#39;s Blog</title>
+      <url>https://avatars.githubusercontent.com/u/90341140?v=4</url>
+      <link>https://avatars.githubusercontent.com/u/90341140?v=4</link>
+    </image>
     <generator>Hugo -- 0.139.4</generator>
     <language>en-us</language>
     <copyright>Pouria Khakpour - 0ne-zero</copyright>
@@ -14,11 +19,433 @@
       <link>https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/</link>
       <pubDate>Mon, 20 Jan 2025 19:27:34 +0330</pubDate>
       <guid>https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/</guid>
-      <description>&lt;p&gt;The &lt;a href=&#34;https://en.wikipedia.org/wiki/SOCKS&#34;&gt;SOCKS5&lt;/a&gt; protocol serves as a foundational proxy protocol that has inspired the development of more advanced solutions for secure communications, privacy enhancement, and &lt;a href=&#34;https://en.wikipedia.org/wiki/Internet_censorship&#34;&gt;internet censorship&lt;/a&gt; circumvention. These issues are particularly pressing in countries like Islamic Republic of Iran, China, India, and Kazakhstan.&lt;/p&gt;
-&lt;p&gt;In this blog, we delve into SOCKS5&amp;rsquo;s usage, technical specifications, limitations, and how it has influenced the development of subsequent proxy protocols.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;1-introduction&#34;&gt;1. Introduction&lt;/h3&gt;
-&lt;p&gt;The SOCKS5 protocol has emerged as a crucial foundation for more advanced proxy solutions. While SOCKS5 itself has limitations, its core principles and structure have inspired the development of sophisticated tools for enhancing privacy, securing online communications, and bypassing internet censorship. In this blog we’re not going to cover that why Internet censorship is bad, I’ll try to keep this blog as technical as possible.&lt;/p&gt;</description>
+      <description>The Role of SOCKS5 in Defying Censorship</description>
+      <content:encoded><![CDATA[<p>The <a href="https://en.wikipedia.org/wiki/SOCKS">SOCKS5</a> protocol serves as a foundational proxy protocol that has inspired the development of more advanced solutions for secure communications, privacy enhancement, and <a href="https://en.wikipedia.org/wiki/Internet_censorship">internet censorship</a> circumvention. These issues are particularly pressing in countries like Islamic Republic of Iran, China, India, and Kazakhstan.</p>
+<p>In this blog, we delve into SOCKS5&rsquo;s usage, technical specifications, limitations, and how it has influenced the development of subsequent proxy protocols.</p>
+<hr>
+<h3 id="1-introduction">1. Introduction</h3>
+<p>The SOCKS5 protocol has emerged as a crucial foundation for more advanced proxy solutions. While SOCKS5 itself has limitations, its core principles and structure have inspired the development of sophisticated tools for enhancing privacy, securing online communications, and bypassing internet censorship. In this blog we’re not going to cover that why Internet censorship is bad, I’ll try to keep this blog as technical as possible.</p>
+<hr>
+<h3 id="2-vpn-vs-proxy-protocols-key-differences">2. VPN vs Proxy Protocols: Key Differences</h3>
+<p>Before diving deeper into SOCKS5, it’s worth highlighting the differences between VPNs and proxy protocols, as both serve to enhance privacy, security, and accessibility but differ significantly in their scope, design, and performance.</p>
+<h4 id="traffic-scope"><strong>Traffic Scope</strong></h4>
+<ul>
+<li>
+<p><strong>Proxy Protocols</strong>: Operate at the application layer, managing traffic for specific applications (e.g., web browsers, torrent clients). They only route traffic from configured applications, limiting their scope to targeted traffic streams.</p>
+</li>
+<li>
+<p><strong>VPN Protocols</strong>: Function at the network layer, encrypting and routing all traffic from the user’s device through a secure tunnel. This comprehensive approach ensures all network traffic is protected, regardless of the application.</p>
+</li>
+</ul>
+<h4 id="connection-persistence"><strong>Connection Persistence</strong></h4>
+<ul>
+<li>
+<p><strong>Proxy Protocols</strong>: May drop connections more frequently because they are session-based and lack the robustness of VPN tunneling protocols.</p>
+</li>
+<li>
+<p><strong>VPN Protocols</strong>: Use persistent tunneling protocols (e.g., OpenVPN, IKEv2) to maintain stable and reliable connections.</p>
+</li>
+</ul>
+<h4 id="privacy"><strong>Privacy</strong></h4>
+<ul>
+<li>
+<p><strong>Proxy Protocols</strong>: Provide minimal privacy. While they can hide the user&rsquo;s IP address for specific applications, the lack of encryption makes data vulnerable to interception.</p>
+</li>
+<li>
+<p><strong>VPN Protocols</strong>: Offer enhanced privacy by masking the user’s IP address and encrypting all traffic, preventing ISPs, hackers, or surveillance entities from monitoring activities.</p>
+</li>
+</ul>
+<hr>
+<h3 id="3-historical-context-the-evolution-of-socks-protocols">3. Historical Context: The Evolution of SOCKS Protocols</h3>
+<p>Here is a brief overview on versions of SOCKS protocols with key features:</p>
+<h4 id="socks1-late-1980s"><strong>SOCKS1 (Late 1980s)</strong></h4>
+<ul>
+<li>
+<p><strong>Function</strong>: Simple TCP traffic routing through a proxy server.</p>
+</li>
+<li>
+<p><strong>Limitations</strong>: No encryption or authentication; basic proxy for bypassing network restrictions.</p>
+</li>
+</ul>
+<h4 id="socks4-early-1990s"><strong>SOCKS4 (Early 1990s)</strong></h4>
+<ul>
+<li>
+<p><strong>Authentication</strong>: Introduced <strong>username/password</strong> authentication.</p>
+</li>
+<li>
+<p><strong>Limitations</strong>: Only supported <strong>TCP</strong> traffic; lacked encryption; basic security.</p>
+</li>
+<li>
+<p><strong>Use Case</strong>: Effective for bypassing firewalls with moderate security.</p>
+</li>
+</ul>
+<h4 id="socks4a-mid-1990s"><strong>SOCKS4a (Mid-1990s)</strong></h4>
+<ul>
+<li>
+<p><strong>DNS Handling</strong>: Allowed <strong>domain name resolution</strong> at the proxy server, enhancing anonymity by preventing local DNS exposure.</p>
+</li>
+<li>
+<p><strong>Limitations</strong>: Still only supported <strong>TCP</strong> traffic.</p>
+</li>
+<li>
+<p><strong>Use Case</strong>: Primarily for bypassing <strong>DNS-based censorship</strong>.</p>
+</li>
+</ul>
+<h4 id="socks5-mid-1990s"><strong>SOCKS5 (Mid-1990s)</strong></h4>
+<ul>
+<li>
+<p><strong>Enhanced Features</strong>: Added support for <strong>UDP</strong> traffic, <strong>IPv6</strong>, and multiple <strong>authentication methods</strong> (e.g., <strong>username/password</strong>, <strong>GSSAPI</strong>).</p>
+</li>
+<li>
+<p><strong>Improved Security</strong>: Enhanced authentication methods, but still lacked full encryption.</p>
+</li>
+<li>
+<p><strong>Censorship Bypass</strong>: Became widely used for bypassing geographical restrictions and censorship while maintaining privacy.</p>
+</li>
+</ul>
+<hr>
+<h3 id="4-real-world-use-cases-where-socks5-fits-in">4. Real-World Use Cases: Where SOCKS5 Fits In</h3>
+<p>SOCKS5&rsquo;s versatility lends itself to numerous applications:</p>
+<ul>
+<li>
+<p><strong>Bypassing Internet Censorship</strong>: SOCKS5 is sort of prototype for developing advanced proxy protocols that bypass Internet censorship by disguising/obfuscating traffic from <a href="https://en.wikipedia.org/wiki/Deep_packet_inspection">deep packet inspection(DPI)</a>.</p>
+</li>
+<li>
+<p><strong>Bypassing Network Restrictions</strong>: Enables access to blocked content by circumventing firewalls and <a href="https://en.wikipedia.org/wiki/Geo-blocking">geo-blocking</a>.</p>
+</li>
+<li>
+<p><strong>Anonymity and Privacy</strong>: Masks the user&rsquo;s IP address and routes traffic through an intermediary, enhancing privacy.</p>
+</li>
+<li>
+<p><strong>Peer-to-Peer (P2P) Applications</strong>: Adopted in torrenting due to its ability to handle high-bandwidth connections efficiently while bypassing throttling and ensuring anonymity.</p>
+</li>
+</ul>
+<hr>
+<h3 id="5-general-overview-core-characteristics-of-socks5">5. General Overview: Core Characteristics of SOCKS5</h3>
+<p>The SOCKS5 protocol is defined in several RFCs:</p>
+<ul>
+<li>
+<p><a href="https://tools.ietf.org/html/rfc1928"><strong>RFC 1928</strong></a>: Covers the SOCKS5 protocol itself.</p>
+</li>
+<li>
+<p><a href="https://tools.ietf.org/html/rfc1929"><strong>RFC 1929</strong></a>: Specifies username/password authentication for SOCKS5.</p>
+</li>
+<li>
+<p><a href="https://tools.ietf.org/html/rfc1961"><strong>RFC 1961</strong></a>: Describes GSSAPI authentication for SOCKS5.</p>
+</li>
+</ul>
+<blockquote>
+<p>It’s highly recommended to review these RFCs, especially the first two, to gain a deeper understanding of the protocol.</p>
+</blockquote>
+<h4 id="authentication-methodshttpsdatatrackerietforgdochtmlrfc1928section-3"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-3"><strong>Authentication Methods</strong></a></h4>
+<p>SOCKS5 supports multiple authentication methods, catering to varying security needs:</p>
+<ul>
+<li>
+<p><strong>No Authentication (0x00)</strong>: Suitable for non-sensitive environments, such as public proxies.</p>
+</li>
+<li>
+<p><strong>GSSAPI Authentication (0x01)</strong>: Provides mutual authentication using mechanisms like Kerberos.</p>
+</li>
+<li>
+<p><strong>Username/Password Authentication (0x02)</strong>: Adds a layer of security, ideal for controlled networks.</p>
+</li>
+</ul>
+<h4 id="addressinghttpsdatatrackerietforgdochtmlrfc1928section-5"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-5"><strong>Addressing</strong></a></h4>
+<p>SOCKS5 supports:</p>
+<ul>
+<li>
+<p><strong>IPv4 and IPv6 addresses</strong>: Ensures compatibility with modern networks.</p>
+</li>
+<li>
+<p><strong>Domain names</strong>: Allows dynamic resolution of hostnames, making it ideal for HTTP proxying.</p>
+</li>
+</ul>
+<h4 id="command-typeshttpsdatatrackerietforgdochtmlrfc1928section-6"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-6"><strong>Command Types</strong></a></h4>
+<p>SOCKS5 defines specific commands to manage traffic forwarding:</p>
+<ul>
+<li>
+<p><strong>CONNECT</strong>: Establishes a TCP connection to the destination server. Commonly used for general proxying.</p>
+</li>
+<li>
+<p><strong>BIND</strong>: Allows the server to listen for incoming connections from a remote host, useful for scenarios like FTP.</p>
+</li>
+<li>
+<p><strong>UDP ASSOCIATE</strong>: Facilitates the forwarding of UDP packets, essential for applications like streaming or online gaming.</p>
+</li>
+</ul>
+<hr>
+<h3 id="6-technical-overview-the-handshake-process">6. Technical Overview: The Handshake Process</h3>
+<p>As we are discussing SOCKS5, it has worth noting the handshake process in SOCKS5. The SOCKS5 handshake ensures secure and efficient communication through three stages:</p>
+<h4 id="1-negotiation"><strong>1. Negotiation</strong></h4>
+<ul>
+<li>
+<p>The client sends supported authentication methods.</p>
+</li>
+<li>
+<p>The server selects a method or rejects the connection if none are compatible.</p>
+</li>
+</ul>
+<p>Example diagram:</p>
+<div class="mermaid">
+    
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Client->>Server: [SOCKS Version] [NMethods] [Methods...]
+    Note right of Client: Client sends the supported methods
+    Server->>Client: [SOCKS Version] [Method]
+    Note left of Server: Server responds with the selected authentication method
+
+</div>
+
+<h4 id="2-authentication"><strong>2. Authentication</strong></h4>
+<ul>
+<li>
+<p>For <strong>GSSAPI Authentication(0x01)</strong>:</p>
+<ul>
+<li>Tokens are exchanged for mutual verification, ensuring secure identities.</li>
+</ul>
+</li>
+<li>
+<p>For <strong>Username/Password Authentication(0x02)</strong>:</p>
+<ul>
+<li>
+<p>Client sends credentials.</p>
+</li>
+<li>
+<p>Server validates credentials and responds with success or failure.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Example diagram:</p>
+<div class="mermaid">
+    
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Client->>Server: [Username Length] [Username] [Password Length] [Password]
+    Note right of Client: Client sends login credentials
+    Server->>Client: [Version] [Status]
+    Note left of Server: Server responds with authentication status
+
+</div>
+
+<h4 id="3-request-reply-handling"><strong>3. Request-Reply Handling</strong></h4>
+<ul>
+<li>
+<p>Client sends the desired action (e.g., CONNECT, BIND, or UDP ASSOCIATE) with the target address and port.</p>
+</li>
+<li>
+<p>Server processes the request and replies with success or failure.</p>
+</li>
+</ul>
+<p>Example diagram:</p>
+<div class="mermaid">
+    
+sequenceDiagram
+    participant Client
+    participant Server
+
+    Client->>Server: [SOCKS Version] [Command] [Reserved] [Address Type] [Destination Address] [Destination Port]
+    Note right of Client: Client sends connection request with destination details
+    Server->>Client: [SOCKS Version] [Reply] [Reserved] [Address Type] [Bound Address] [Bound Port]
+    Note left of Server: Server responds with connection status and bound address
+
+</div>
+
+<hr>
+<h3 id="7-enhancing-socks5-its-limitations">7. Enhancing SOCKS5: Its Limitations</h3>
+<ol>
+<li>
+<p><strong>Data Encryption</strong>:</p>
+<ul>
+<li>
+<p><strong>Problem</strong>: SOCKS5 doesn’t encrypt the data payload by default, making it vulnerable to interception and monitoring(MITM) by censorship systems using DPI. In countries with heavy censorship, this allows for detection and blocking of traffic.</p>
+</li>
+<li>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>
+<p><strong>TLS</strong>: Transport Layer Security (TLS) encrypts the data payload, ensuring that all communications remain confidential and protected from man-in-the-middle attacks. It also verifies server identities, enhancing trustworthiness.</p>
+</li>
+<li>
+<p><strong>Custom Cipher Implementations</strong>: By integrating advanced ciphers like AEAD (Authenticated Encryption with Associated Data), SOCKS5 can provide end-to-end encryption tailored to specific use cases. This approach not only protects data integrity but also allows flexibility for implementing cutting-edge security mechanisms.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Identifiable Traffic</strong>:</p>
+<ul>
+<li>
+<p><strong>Problem</strong>: Censorship systems are designed not only to block access to certain content but also to identify the use of proxies and VPNs. SOCKS5 traffic, if not disguised, can be easily detected by advanced DPI systems because of its unique patterns and port usage. For example, SOCKS5 usually communicates on port 1080, a port that is commonly associated with proxy services and can be easily blocked by governments.</p>
+</li>
+<li>
+<p><strong>Solution</strong>:</p>
+<ul>
+<li>
+<p><strong>Protocol Camouflage</strong>: Make traffic to mimic legitimate protocols like HTTPS or DNS.</p>
+</li>
+<li>
+<p><strong>Fragmentation and Reassembly</strong>: Break traffic into smaller packets and reorder them to obscure original patterns.</p>
+</li>
+<li>
+<p><strong>Traffic Padding</strong>: Modify packet content to remove predictable patterns, making traffic appear random.</p>
+</li>
+<li>
+<p><strong>Randomized Packet Timing</strong>: Introduce delays to packets or vary transmission intervals to disrupt timing analysis.</p>
+</li>
+<li>
+<p><strong>Noise Injection</strong>: Add decoy traffic to create noise, reducing the signal-to-noise ratio for pattern analysis.</p>
+</li>
+<li>
+<p><strong>Port Randomization</strong>: Use dynamically changing ports to make detection harder.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>By addressing these limitations, SOCKS5 can become a more robust solution for censorship circumvention and secure communication.</p>
+<hr>
+<h3 id="8-building-on-socks5-derivative-protocols">8. Building on SOCKS5: Derivative Protocols</h3>
+<p>As mentioned, SOCKS5 has inspired the development of advanced proxy protocols, adapting its foundational principles to overcome its limitations while preserving its versatility.</p>
+<h4 id="key-features-adopted-by-derivative-protocols"><strong>Key Features Adopted by Derivative Protocols</strong></h4>
+<ul>
+<li>
+<p><strong>Addressing</strong>: Comprehensive mechanism to handling addresses such as IPv4, IPv6, and domain names.</p>
+</li>
+<li>
+<p><strong>Command Structure</strong>: Clear commands like CONNECT, BIND, and UDP ASSOCIATE serve as a blueprint for advanced traffic control.</p>
+</li>
+</ul>
+<h4 id="examples-of-derivative-protocols"><strong>Examples of Derivative Protocols</strong></h4>
+<ol>
+<li>
+<p><a href="https://shadowsocks.org/"><strong>Shadowsocks</strong></a>:</p>
+<ul>
+<li>
+<p><strong>Adaptation</strong>: Retains SOCKS5&rsquo;s addressing format while encrypting data streams to bypass DPI and censorship.</p>
+</li>
+<li>
+<p><strong>Enhancements</strong>: Utilizes encryption methods like AEAD ciphers for robust data security and privacy.</p>
+</li>
+<li>
+<p><strong>Use Case</strong>: Ideal for accessing restricted content in heavily censored regions.</p>
+</li>
+<li>
+<p><a href="https://github.com/shadowsocks/shadowsocks-rust/blob/7403e7b9e9022a7c7dd3a14a34ca831f9587c7d0/crates/shadowsocks/src/relay/tcprelay/aead.rs#L6"><strong>Protocol Header</strong></a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>+------+---------------------+------------------+
+</span></span><span style="display:flex;"><span>| ATYP | Destination Address | Destination Port |
+</span></span><span style="display:flex;"><span>+------+---------------------+------------------+
+</span></span><span style="display:flex;"><span>|  1   |       Variable      |         2        |
+</span></span><span style="display:flex;"><span>+------+---------------------+------------------+
+</span></span></code></pre></div><ul>
+<li>The <a href="https://shadowsocks.org/doc/what-is-shadowsocks.html#addressing">addressing format in Shadowsocks</a> is the same as that of SOCKS5.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><a href="https://trojan-gfw.github.io/trojan/"><strong>Trojan</strong></a>:</p>
+<ul>
+<li>
+<p><strong>Adaptation</strong>: Trojan builds on the SOCKS5 structure but goes a step further by encapsulating SOCKS5-like headers within <strong>TLS</strong> (Transport Layer Security). This encapsulation disguises the proxy traffic as standard HTTPS, making it indistinguishable from regular web traffic and significantly more resistant to censorship and blocking.</p>
+</li>
+<li>
+<p><strong>Enhancements</strong>: Trojan enhances the privacy of the metadata by encrypting the entire connection using TLS. This prevents middleboxes and censorship mechanisms from detecting the traffic as a proxy connection. It essentially masks the proxy traffic as HTTPS traffic, allowing it to bypass most filtering systems that look for proxies.</p>
+</li>
+<li>
+<p><strong>Use Case</strong>: Trojan is particularly useful in environments where censorship and network blocking are aggressive, as it disguises proxy traffic as ordinary HTTPS traffic, making it more difficult to block. It is popular in regions with heavy censorship, such as Islamic Republic of Iran.</p>
+</li>
+<li>
+<p><a href="https://trojan-gfw.github.io/trojan/protocol.html"><strong>Protocol Header</strong></a>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>+-----------------------+---------+----------------+---------+----------+
+</span></span><span style="display:flex;"><span>| hex(SHA224(password)) |  CRLF   | Trojan Request |  CRLF   | Payload  |
+</span></span><span style="display:flex;"><span>+-----------------------+---------+----------------+---------+----------+
+</span></span><span style="display:flex;"><span>|          56           | X&#39;0D0A&#39; |    Variable    | X&#39;0D0A&#39; | Variable |
+</span></span><span style="display:flex;"><span>+-----------------------+---------+----------------+---------+----------+
+</span></span></code></pre></div><ul>
+<li>
+<p>The <strong>Trojan Request</strong> field is structured similarly to SOCKS5 but is sent under the TLS layer to mask the traffic:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>+-----+------+----------+----------+
+</span></span><span style="display:flex;"><span>| CMD | ATYP | DST.ADDR | DST.PORT |
+</span></span><span style="display:flex;"><span>+-----+------+----------+----------+
+</span></span><span style="display:flex;"><span>|  1  |  1   | Variable |    2     |
+</span></span><span style="display:flex;"><span>+-----+------+----------+----------+
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="9-conclusion">9. Conclusion</h3>
+<p>While SOCKS5 may not be the perfect fit for overcoming the sophisticated Deep Packet Inspection (DPI) and other advanced censorship techniques in today’s digital landscape, its impact remains undeniable. Its versatile design and foundational principles have paved the way for more secure and robust proxy solutions. Protocols like Shadowsocks and Trojan build upon what SOCKS5 started, addressing its shortcomings while maintaining its efficiency and adaptability.</p>
+<p>I encourage you to explore further into the topics of internet censorship and advanced proxy protocols. You can deepen your understanding through resources such as <a href="https://github.com/net4people/bbs/issues">Net4People</a>, <a href="https://gfw.report/">GFW Report</a>, <a href="https://irgfw.report/">IR-GFW Report</a>, <a href="https://wikicensorship.github.io/">Wiki Censorship (in Persian)</a>, <a href="https://ericw.us/trow/ecen5003/">Eric Wustrow&rsquo;s Course</a>, and <a href="https://censorbib.nymity.ch/">CensorBib</a>.</p>
+<p>Most importantly, we must not be silent. At the very least, we can speak out against the censorship we face, bear the consequences, and refuse to contribute to isolating any nation from the global community.</p>
+<h3 id="references">References</h3>
+<ol>
+<li>
+<p>SOCKS5 Protocol Overview. Available: <a href="https://en.wikipedia.org/wiki/SOCKS">SOCKS</a>.</p>
+</li>
+<li>
+<p>Internet Censorship. Available: <a href="https://en.wikipedia.org/wiki/Internet_censorship">Internet Censorship</a>.</p>
+</li>
+<li>
+<p>Deep Packet Inspection. Available: <a href="https://en.wikipedia.org/wiki/Deep_packet_inspection">Deep Packet Inspection</a>.</p>
+</li>
+<li>
+<p>Geo-blocking. Available: <a href="https://en.wikipedia.org/wiki/Geo-blocking">Geo-blocking</a>.</p>
+</li>
+<li>
+<p>RFC 1928: SOCKS Version 5 Specification. Available: <a href="https://tools.ietf.org/html/rfc1928">RFC 1928</a>.</p>
+</li>
+<li>
+<p>RFC 1929: Username/Password Authentication for SOCKS Version 5. Available: <a href="https://tools.ietf.org/html/rfc1929">RFC 1929</a>.</p>
+</li>
+<li>
+<p>RFC 1961: GSSAPI Authentication for SOCKS Version 5. Available: <a href="https://tools.ietf.org/html/rfc1961">RFC 1961</a>.</p>
+</li>
+<li>
+<p>Shadowsocks Protocol Documentation. Available: <a href="https://shadowsocks.org/doc/what-is-shadowsocks.html#addressing">Shadowsocks</a>.</p>
+</li>
+<li>
+<p>Shadowsocks Protocol Addressing Header Source Code. Available: <a href="https://github.com/shadowsocks/shadowsocks-rust/blob/7403e7b9e9022a7c7dd3a14a34ca831f9587c7d0/crates/shadowsocks/src/relay/tcprelay/aead.rs#L6">Source Code</a></p>
+</li>
+<li>
+<p>Addressing Format in Shadowsocks. Available: <a href="https://shadowsocks.org/doc/what-is-shadowsocks.html#addressing">Shadowsocks</a>.</p>
+</li>
+<li>
+<p>Trojan Protocol Documentation. Available: <a href="https://trojan-gfw.github.io/trojan/">Trojan</a>.</p>
+</li>
+<li>
+<p>Trojan Protocol Header Documentation. Available: <a href="https://trojan-gfw.github.io/trojan/protocol.html">Trojan</a></p>
+</li>
+<li>
+<p>Net4People. Available: <a href="https://github.com/net4people/bbs/issues">Net4People</a>.</p>
+</li>
+<li>
+<p>GFW Report. Available: <a href="https://gfw.report/">GFW Report</a>.</p>
+</li>
+<li>
+<p>IR-GFW Report. Available: <a href="https://irgfw.report/">IR-GFW Report</a>.</p>
+</li>
+<li>
+<p>Wiki Censorship (in Persian). Available: <a href="https://wikicensorship.github.io/">Wiki Censorship</a>.</p>
+</li>
+<li>
+<p>Eric Wustrow&rsquo;s Course. Available: <a href="https://ericw.us/trow/ecen5003/">Eric Wustrow&rsquo;s Course</a>.</p>
+</li>
+<li>
+<p>CensorBib. Available: <a href="https://censorbib.nymity.ch/">CensorBib</a>.</p>
+</li>
+</ol>
+]]></content:encoded>
     </item>
     <item>
       <title>Init</title>
@@ -26,6 +453,8 @@
       <pubDate>Mon, 20 Jan 2025 19:19:04 +0330</pubDate>
       <guid>https://0ne-zero.github.io/blogs/init/</guid>
       <description>&lt;p&gt;Just init post.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>Just init post.</p>
+]]></content:encoded>
     </item>
     <item>
       <title>About</title>
@@ -33,6 +462,8 @@
       <pubDate>Mon, 20 Jan 2025 18:45:47 +0330</pubDate>
       <guid>https://0ne-zero.github.io/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m 0ne-zero.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>I&rsquo;m 0ne-zero.</p>
+]]></content:encoded>
     </item>
   </channel>
 </rss>
