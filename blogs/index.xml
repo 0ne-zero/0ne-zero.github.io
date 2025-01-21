@@ -435,14 +435,5 @@ sequenceDiagram
 </ol>
 ]]></content:encoded>
     </item>
-    <item>
-      <title>Init</title>
-      <link>https://0ne-zero.github.io/blogs/init/</link>
-      <pubDate>Mon, 20 Jan 2025 19:19:04 +0330</pubDate>
-      <guid>https://0ne-zero.github.io/blogs/init/</guid>
-      <description>&lt;p&gt;Just init post.&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>Just init post.</p>
-]]></content:encoded>
-    </item>
   </channel>
 </rss>
