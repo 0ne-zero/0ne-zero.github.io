@@ -403,7 +403,7 @@ sequenceDiagram
 <p>Shadowsocks Protocol Documentation. Available: <a href="https://shadowsocks.org/doc/what-is-shadowsocks.html#addressing">Shadowsocks</a>.</p>
 </li>
 <li>
-<p>Shadowsocks Protocol Addressing Header Source Code. Available: <a href="https://github.com/shadowsocks/shadowsocks-rust/blob/7403e7b9e9022a7c7dd3a14a34ca831f9587c7d0/crates/shadowsocks/src/relay/tcprelay/aead.rs#L6">Source Code</a></p>
+<p>Shadowsocks Protocol Addressing Header Source Code. Available: <a href="https://github.com/shadowsocks/shadowsocks-rust/blob/7403e7b9e9022a7c7dd3a14a34ca831f9587c7d0/crates/shadowsocks/src/relay/tcprelay/aead.rs#L6">Source Code</a>.</p>
 </li>
 <li>
 <p>Addressing Format in Shadowsocks. Available: <a href="https://shadowsocks.org/doc/what-is-shadowsocks.html#addressing">Shadowsocks</a>.</p>
@@ -412,7 +412,7 @@ sequenceDiagram
 <p>Trojan Protocol Documentation. Available: <a href="https://trojan-gfw.github.io/trojan/">Trojan</a>.</p>
 </li>
 <li>
-<p>Trojan Protocol Header Documentation. Available: <a href="https://trojan-gfw.github.io/trojan/protocol.html">Trojan</a></p>
+<p>Trojan Protocol Header Documentation. Available: <a href="https://trojan-gfw.github.io/trojan/protocol.html">Trojan</a>.</p>
 </li>
 <li>
 <p>Net4People. Available: <a href="https://github.com/net4people/bbs/issues">Net4People</a>.</p>
