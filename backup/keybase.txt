@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/its0nezero
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://0ne-zero.github.io
+  * I am its0nezero (https://keybase.io/its0nezero) on keybase.
+  * I have a public key ASALLqk8p2PHi4pi40pTbkik0RZq_vtA5w7cTrY0Sw5Wywo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01200b2ea93ca763c78b8a62e34a536e48a4d1166afefb40e70edc4eb6344b0e56cb0a",
+      "host": "keybase.io",
+      "kid": "01200b2ea93ca763c78b8a62e34a536e48a4d1166afefb40e70edc4eb6344b0e56cb0a",
+      "uid": "b8336e503c1a19dda818804c565aec19",
+      "username": "its0nezero"
+    },
+    "merkle_root": {
+      "ctime": 1737524091,
+      "hash": "4cd734273871abcb4a5736659d7e09a864d066347e6c7a4eda4f9a220bfd35c08833cad44f4f406357a5d7147682cc09b49270031bccc7fd616a39af3def1774",
+      "hash_meta": "3ea0798f65d7c94abd9cd0a2c73d173d5276038485c02156c50370cc0e0f44bd",
+      "seqno": 26472335
+    },
+    "service": {
+      "entropy": "dBgNf7/7AFwWIPBsvheSpyz6",
+      "hostname": "0ne-zero.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "6.4.0"
+  },
+  "ctime": 1737524130,
+  "expire_in": 504576000,
+  "prev": "01f0730eefc4c8c003fceccfc263c091d68feea99e61fa661934da9c5c4a2ba3",
+  "seqno": 7,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgCy6pPKdjx4uKYuNKU25IpNEWav77QOcO3E62NEsOVssKp3BheWxvYWTESpcCB8QgAfBzDu/EyMAD/OzPwmPAkdaP7qmeYfpmGTTanFxKK6PEIJnKntdMvPoByyYEHH/A3J4sNj7J44+Eku7Kf+0pUIhoAgHCo3NpZ8RA95GTM4aEjIe20KJid266AZDxtyYAVc1Qa0PdZ7GRIXDBha/Qw4urqs287B7R6GmLDCI4rM4cg9iRHUS6stHLAqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIDKnFLkRhUQDvbgVanekS+Cdo36A3YEy7+9r5xnWAoUUo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/its0nezero
+
+==================================================================

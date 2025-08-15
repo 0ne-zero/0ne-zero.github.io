@@ -9,11 +9,208 @@
       <url>https://avatars.githubusercontent.com/u/90341140?v=4</url>
       <link>https://avatars.githubusercontent.com/u/90341140?v=4</link>
     </image>
-    <generator>Hugo -- 0.139.4</generator>
+    <generator>Hugo -- 0.148.1</generator>
     <language>en-us</language>
     <copyright>Pouria Khakpour - 0ne-zero</copyright>
-    <lastBuildDate>Mon, 20 Jan 2025 19:27:34 +0330</lastBuildDate>
+    <lastBuildDate>Fri, 15 Aug 2025 17:10:27 +0330</lastBuildDate>
     <atom:link href="https://0ne-zero.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GoTraceroute</title>
+      <link>https://0ne-zero.github.io/projects/gotraceroute/</link>
+      <pubDate>Fri, 15 Aug 2025 17:10:27 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/gotraceroute/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Developed a cross‑platform traceroute library and CLI tool in Go, supporting IPv4/IPv6 and TCP/UDP protocols.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Leveraged raw sockets and low‑level OS networking APIs to craft custom TCP SYN and UDP probe packets, achieving control over outgoing traffic.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Designed concurrent monitoring and accurate probe-response matching to enhance traceroute speed and reliability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Implemented configurable parameters including protocol, first TTL, max hops, IP version preference, timeout, retries, delay, and early stop conditions, making the tool flexible.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>
+<p>Developed a cross‑platform traceroute library and CLI tool in Go, supporting IPv4/IPv6 and TCP/UDP protocols.</p>
+</li>
+<li>
+<p>Leveraged raw sockets and low‑level OS networking APIs to craft custom TCP SYN and UDP probe packets, achieving control over outgoing traffic.</p>
+</li>
+<li>
+<p>Designed concurrent monitoring and accurate probe-response matching to enhance traceroute speed and reliability.</p>
+</li>
+<li>
+<p>Implemented configurable parameters including protocol, first TTL, max hops, IP version preference, timeout, retries, delay, and early stop conditions, making the tool flexible.</p>
+</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/goTraceroute">https://github.com/0ne-zero/goTraceroute</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Protoprobe</title>
+      <link>https://0ne-zero.github.io/projects/protoprobe/</link>
+      <pubDate>Fri, 15 Aug 2025 17:10:17 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/protoprobe/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Developed ProtoProbe, a modular Go network diagnostics tool for assessing protocol accessibility under censorship conditions.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Implemented support for multiple protocols including ICMP, TCP, DNS (UDP/TCP/TLS/HTTPS), and WebSocket to measure RTT and packet loss.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Designed a flexible JSON-based configuration system enabling customizable tests across various hosts and protocols.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/0ne-zero/ProtoProbe&#34;&gt;https://github.com/0ne-zero/ProtoProbe&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>
+<p>Developed ProtoProbe, a modular Go network diagnostics tool for assessing protocol accessibility under censorship conditions.</p>
+</li>
+<li>
+<p>Implemented support for multiple protocols including ICMP, TCP, DNS (UDP/TCP/TLS/HTTPS), and WebSocket to measure RTT and packet loss.</p>
+</li>
+<li>
+<p>Designed a flexible JSON-based configuration system enabling customizable tests across various hosts and protocols.</p>
+</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/ProtoProbe">https://github.com/0ne-zero/ProtoProbe</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Proxy Protocol</title>
+      <link>https://0ne-zero.github.io/projects/proxy-protocol/</link>
+      <pubDate>Fri, 15 Aug 2025 17:10:09 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/proxy-protocol/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Designed and implemented a custom proxy protocol inspired by SOCKS5, handling encrypted traffic using AEAD ciphers to ensure end-to-end encryption.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Developed a secure authentication mechanism leveraging AES/GCM encryption to validate the client-server handshake, effectively preventing man-in-the-middle (MITM) attacks, unauthorized access, and ensuring data integrity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Built a nonce-based system to protect against replay attacks, safeguarding the integrity and confidentiality of communications while enhancing user anonymity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Strengthened expertise in Go programming, encryption, protocol development, authentication systems, and code documentation through this project.&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>
+<p>Designed and implemented a custom proxy protocol inspired by SOCKS5, handling encrypted traffic using AEAD ciphers to ensure end-to-end encryption.</p>
+</li>
+<li>
+<p>Developed a secure authentication mechanism leveraging AES/GCM encryption to validate the client-server handshake, effectively preventing man-in-the-middle (MITM) attacks, unauthorized access, and ensuring data integrity.</p>
+</li>
+<li>
+<p>Built a nonce-based system to protect against replay attacks, safeguarding the integrity and confidentiality of communications while enhancing user anonymity.</p>
+</li>
+<li>
+<p>Strengthened expertise in Go programming, encryption, protocol development, authentication systems, and code documentation through this project.</p>
+</li>
+</ul>
+<p><strong>Github:</strong> <a href="">SORRY</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Easy Rust Fa</title>
+      <link>https://0ne-zero.github.io/projects/easy-rust-fa/</link>
+      <pubDate>Fri, 15 Aug 2025 17:10:08 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/easy-rust-fa/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Translated comprehensive Rust language documentation with more than 8K stars on GitHub from English to Persian, demonstrating technical translation skills, deepening Rust language proficiency, and contributing to the programming community by providing valuable localized resources.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/0ne-zero/easy_rust_fa&#34;&gt;https://github.com/0ne-zero/easy_rust_fa&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>Translated comprehensive Rust language documentation with more than 8K stars on GitHub from English to Persian, demonstrating technical translation skills, deepening Rust language proficiency, and contributing to the programming community by providing valuable localized resources.</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/easy_rust_fa">https://github.com/0ne-zero/easy_rust_fa</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Iran National Identifier</title>
+      <link>https://0ne-zero.github.io/projects/iran-national-identifier/</link>
+      <pubDate>Fri, 15 Aug 2025 17:10:02 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/iran-national-identifier/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Created a command-line program in Rust to generate and validate Iran’s national identifier code (INID), gaining a strong understanding of Rust’s syntax and features for developing command-line applications.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/0ne-zero/inid_rs&#34;&gt;https://github.com/0ne-zero/inid_rs&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>Created a command-line program in Rust to generate and validate Iran’s national identifier code (INID), gaining a strong understanding of Rust’s syntax and features for developing command-line applications.</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/inid_rs">https://github.com/0ne-zero/inid_rs</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Memorial Website</title>
+      <link>https://0ne-zero.github.io/projects/memorial-website/</link>
+      <pubDate>Fri, 15 Aug 2025 17:09:48 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/memorial-website/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Developed a website using the Flask framework to showcase the personal biography, favorite music, pictures, and quotes of a deceased individual, enhancing my web development skills.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/0ne-zero/memorial&#34;&gt;https://github.com/0ne-zero/memorial&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>Developed a website using the Flask framework to showcase the personal biography, favorite music, pictures, and quotes of a deceased individual, enhancing my web development skills.</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/memorial">https://github.com/0ne-zero/memorial</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Comic Website</title>
+      <link>https://0ne-zero.github.io/projects/comic-website/</link>
+      <pubDate>Fri, 15 Aug 2025 17:09:41 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/comic-website/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Developed a comic website using Gin and GORM, incorporating features like commenting, liking, and searching to enhance user engagement while gaining proficiency in Go web development.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/0ne-zero/comic_site&#34;&gt;https://github.com/0ne-zero/comic_site&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>Developed a comic website using Gin and GORM, incorporating features like commenting, liking, and searching to enhance user engagement while gaining proficiency in Go web development.</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/comic_site">https://github.com/0ne-zero/comic_site</a></p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Truth Dare Bot</title>
+      <link>https://0ne-zero.github.io/projects/truth-dare-bot/</link>
+      <pubDate>Fri, 15 Aug 2025 17:09:33 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/truth-dare-bot/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Developed a Telegram bot for the Truth-Dare game in Persian, enhancing my skills in bot development with Go.&lt;/li&gt;
+&lt;/ul&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>Developed a Telegram bot for the Truth-Dare game in Persian, enhancing my skills in bot development with Go.</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Emma Text Assistant</title>
+      <link>https://0ne-zero.github.io/projects/emma-text-assistant/</link>
+      <pubDate>Fri, 15 Aug 2025 17:09:22 +0330</pubDate>
+      <guid>https://0ne-zero.github.io/projects/emma-text-assistant/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Developed a command-line text assistant featuring chat, Google search, text translation, Wikipedia search, date and time display, and joke telling capabilities.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Utilized the State design pattern to manage mode transitions (Text, Half-Audio, CMD, and Stop), enhancing both functionality and code readability.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Github:&lt;/strong&gt; &lt;a href=&#34;https://github.com/0ne-zero/Emma_Text_Assistant&#34;&gt;https://github.com/0ne-zero/Emma_Text_Assistant&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<ul>
+<li>
+<p>Developed a command-line text assistant featuring chat, Google search, text translation, Wikipedia search, date and time display, and joke telling capabilities.</p>
+</li>
+<li>
+<p>Utilized the State design pattern to manage mode transitions (Text, Half-Audio, CMD, and Stop), enhancing both functionality and code readability.</p>
+</li>
+</ul>
+<p><strong>Github:</strong> <a href="https://github.com/0ne-zero/Emma_Text_Assistant">https://github.com/0ne-zero/Emma_Text_Assistant</a></p>
+]]></content:encoded>
+    </item>
     <item>
       <title>Exploring SOCKS5 the Fundation of Advanced Proxy Protocols for Internet Censorship Circumvention</title>
       <link>https://0ne-zero.github.io/blogs/exploring-socks5-the-fundation-of-advanced-proxy-protocols-for-internet-censorship-circumvention/</link>
@@ -123,9 +320,8 @@
 </li>
 </ul>
 <blockquote>
-<p>It’s highly recommended to review these RFCs, especially the first two, to gain a deeper understanding of the protocol.</p>
-</blockquote>
-<h4 id="authentication-methodshttpsdatatrackerietforgdochtmlrfc1928section-3"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-3"><strong>Authentication Methods</strong></a></h4>
+<p>It’s highly recommended to review these RFCs, especially the first two, to gain a deeper understanding of the protocol.</p></blockquote>
+<h4 id="authentication-methods"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-3"><strong>Authentication Methods</strong></a></h4>
 <p>SOCKS5 supports multiple authentication methods, catering to varying security needs:</p>
 <ul>
 <li>
@@ -138,7 +334,7 @@
 <p><strong>Username/Password Authentication (0x02)</strong>: Adds a layer of security, ideal for controlled networks.</p>
 </li>
 </ul>
-<h4 id="addressinghttpsdatatrackerietforgdochtmlrfc1928section-5"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-5"><strong>Addressing</strong></a></h4>
+<h4 id="addressing"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-5"><strong>Addressing</strong></a></h4>
 <p>SOCKS5 supports:</p>
 <ul>
 <li>
@@ -148,7 +344,7 @@
 <p><strong>Domain names</strong>: Allows dynamic resolution of hostnames, making it ideal for HTTP proxying.</p>
 </li>
 </ul>
-<h4 id="command-typeshttpsdatatrackerietforgdochtmlrfc1928section-6"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-6"><strong>Command Types</strong></a></h4>
+<h4 id="command-types"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-6"><strong>Command Types</strong></a></h4>
 <p>SOCKS5 defines specific commands to manage traffic forwarding:</p>
 <ul>
 <li>
@@ -175,7 +371,7 @@
 </ul>
 <p>Example diagram:</p>
 <div class="mermaid">
-    
+
 sequenceDiagram
     participant Client
     participant Server
@@ -186,6 +382,13 @@ sequenceDiagram
     Note left of Server: Server responds with the selected authentication method
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true });
+</script>
+
 
 <h4 id="2-authentication"><strong>2. Authentication</strong></h4>
 <ul>
@@ -209,7 +412,7 @@ sequenceDiagram
 </ul>
 <p>Example diagram:</p>
 <div class="mermaid">
-    
+
 sequenceDiagram
     participant Client
     participant Server
@@ -220,6 +423,13 @@ sequenceDiagram
     Note left of Server: Server responds with authentication status
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true });
+</script>
+
 
 <h4 id="3-request-reply-handling"><strong>3. Request-Reply Handling</strong></h4>
 <ul>
@@ -232,7 +442,7 @@ sequenceDiagram
 </ul>
 <p>Example diagram:</p>
 <div class="mermaid">
-    
+
 sequenceDiagram
     participant Client
     participant Server
@@ -243,6 +453,13 @@ sequenceDiagram
     Note left of Server: Server responds with connection status and bound address
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true });
+</script>
+
 
 <hr>
 <h3 id="6-enhancing-socks5-its-limitations">6. Enhancing SOCKS5: Its Limitations</h3>

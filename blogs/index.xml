@@ -9,7 +9,7 @@
       <url>https://avatars.githubusercontent.com/u/90341140?v=4</url>
       <link>https://avatars.githubusercontent.com/u/90341140?v=4</link>
     </image>
-    <generator>Hugo -- 0.139.4</generator>
+    <generator>Hugo -- 0.148.1</generator>
     <language>en-us</language>
     <copyright>Pouria Khakpour - 0ne-zero</copyright>
     <lastBuildDate>Mon, 20 Jan 2025 19:27:34 +0330</lastBuildDate>
@@ -123,9 +123,8 @@
 </li>
 </ul>
 <blockquote>
-<p>It’s highly recommended to review these RFCs, especially the first two, to gain a deeper understanding of the protocol.</p>
-</blockquote>
-<h4 id="authentication-methodshttpsdatatrackerietforgdochtmlrfc1928section-3"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-3"><strong>Authentication Methods</strong></a></h4>
+<p>It’s highly recommended to review these RFCs, especially the first two, to gain a deeper understanding of the protocol.</p></blockquote>
+<h4 id="authentication-methods"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-3"><strong>Authentication Methods</strong></a></h4>
 <p>SOCKS5 supports multiple authentication methods, catering to varying security needs:</p>
 <ul>
 <li>
@@ -138,7 +137,7 @@
 <p><strong>Username/Password Authentication (0x02)</strong>: Adds a layer of security, ideal for controlled networks.</p>
 </li>
 </ul>
-<h4 id="addressinghttpsdatatrackerietforgdochtmlrfc1928section-5"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-5"><strong>Addressing</strong></a></h4>
+<h4 id="addressing"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-5"><strong>Addressing</strong></a></h4>
 <p>SOCKS5 supports:</p>
 <ul>
 <li>
@@ -148,7 +147,7 @@
 <p><strong>Domain names</strong>: Allows dynamic resolution of hostnames, making it ideal for HTTP proxying.</p>
 </li>
 </ul>
-<h4 id="command-typeshttpsdatatrackerietforgdochtmlrfc1928section-6"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-6"><strong>Command Types</strong></a></h4>
+<h4 id="command-types"><a href="https://datatracker.ietf.org/doc/html/rfc1928#section-6"><strong>Command Types</strong></a></h4>
 <p>SOCKS5 defines specific commands to manage traffic forwarding:</p>
 <ul>
 <li>
@@ -175,7 +174,7 @@
 </ul>
 <p>Example diagram:</p>
 <div class="mermaid">
-    
+
 sequenceDiagram
     participant Client
     participant Server
@@ -186,6 +185,13 @@ sequenceDiagram
     Note left of Server: Server responds with the selected authentication method
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true });
+</script>
+
 
 <h4 id="2-authentication"><strong>2. Authentication</strong></h4>
 <ul>
@@ -209,7 +215,7 @@ sequenceDiagram
 </ul>
 <p>Example diagram:</p>
 <div class="mermaid">
-    
+
 sequenceDiagram
     participant Client
     participant Server
@@ -220,6 +226,13 @@ sequenceDiagram
     Note left of Server: Server responds with authentication status
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true });
+</script>
+
 
 <h4 id="3-request-reply-handling"><strong>3. Request-Reply Handling</strong></h4>
 <ul>
@@ -232,7 +245,7 @@ sequenceDiagram
 </ul>
 <p>Example diagram:</p>
 <div class="mermaid">
-    
+
 sequenceDiagram
     participant Client
     participant Server
@@ -243,6 +256,13 @@ sequenceDiagram
     Note left of Server: Server responds with connection status and bound address
 
 </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>
+mermaid.initialize({ startOnLoad: true });
+</script>
+
 
 <hr>
 <h3 id="6-enhancing-socks5-its-limitations">6. Enhancing SOCKS5: Its Limitations</h3>
